@@ -1,4 +1,4 @@
-FROM centos:6
+FROM centos:7
 
 RUN yum update -y
 RUN yum install -y kernel-devel libtool gcc-c++ make cmake bison flex gettext rpmdevtools redhat-rpm-config mock yum-utils

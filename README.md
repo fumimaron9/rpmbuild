@@ -4,7 +4,13 @@
 
 docker >= 1.9
 
-## example
+## usage
+
+```
+# for mac only
+brew install coreutils gnu-getopt
+brew link gnu-getopt --force
+```
 
 ```
 git clone https://github.com/fumimaron9/rpmbuild.git
