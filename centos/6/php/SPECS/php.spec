@@ -60,8 +60,8 @@ install -m 644 %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/php.d/opcache.ini
 mv $RPM_BUILD_ROOT%{_sysconfdir}/php-fpm.conf.default $RPM_BUILD_ROOT%{_sysconfdir}/php-fpm.conf
 mv $RPM_BUILD_ROOT%{_sysconfdir}/php-fpm.d/www.conf.default $RPM_BUILD_ROOT%{_sysconfdir}/php-fpm.d/www.conf
 
-install -m 755 -d $RPM_BUILD_ROOT%{_unitdir}
-install -m 644 sapi/fpm/php-fpm.service $RPM_BUILD_ROOT%{_unitdir}/php-fpm.service
+install -m 755 -d $RPM_BUILD_ROOT%{_initddir}
+install -m 644 sapi/fpm/init.d.php-fpm $RPM_BUILD_ROOT%{_initddir}/php-fpm
 
 
 %files
@@ -72,12 +72,6 @@ install -m 644 sapi/fpm/php-fpm.service $RPM_BUILD_ROOT%{_unitdir}/php-fpm.servi
 %config(noreplace) %{_sysconfdir}/php-fpm.d/www.conf
 
 
--%dir %{_sysconfdir}/php.d
--%{_sysconfdir}/php.d/opcache.ini
--#/usr
--%{_prefix}
-
-
 #%{_prefix}
 %{_sysconfdir}/*
 %{_bindir}/*
@@ -85,4 +79,4 @@ install -m 644 sapi/fpm/php-fpm.service $RPM_BUILD_ROOT%{_unitdir}/php-fpm.servi
 %{_libdir}/*
 %{_sbindir}/*
 %{_datadir}/*
-%{_unitdir}/*
+%{_initddir}/*
