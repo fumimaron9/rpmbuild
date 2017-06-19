@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # from: https://github.com/direnv/direnv/blob/3bb35d375331fca89614f0015b2a6cd21688ab79/bin/direnv
+# usage: abs_dirname $filename
 abs_dirname() {
   prev_path="$1"
   # Resolve the symlink(s) recursively
