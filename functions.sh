@@ -81,6 +81,9 @@ function yes_or_no() {
   esac
 }
 
+# same
+#readonly SCRIPT_PATH=$(readlink -f $0)
+#readonly SCRIPT_DIR=$(dirname ${SCRIPT_PATH})
 readonly SCRIPT_DIR="$(abs_dirname)";
 readonly SCRIPT_FILE="$(basename ${0})";
 
