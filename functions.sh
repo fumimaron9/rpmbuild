@@ -85,6 +85,7 @@ function yes_or_no() {
 #readonly SCRIPT_PATH=$(readlink -f $0)
 #readonly SCRIPT_DIR=$(dirname ${SCRIPT_PATH})
 #readonly SCRIPT_NAME=$(basename $SCRIPT_PATH) # SCRIPT_FILE
+# memo REALPATH=$(cd $SCRIPT_DIR/../; pwd)
 readonly SCRIPT_DIR="$(abs_dirname)";
 readonly SCRIPT_FILE="$(basename ${0})";
 
